@@ -7,6 +7,7 @@ class Cat():
         self.image = pygame.image.load("./images/cat_right.png")
         self.x, self.y = x, y
         self.screen = screen
+        self.lives = 3
 
     def draw(self):
         self.screen.blit(self.image, [self.x, self.y])
