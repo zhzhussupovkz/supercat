@@ -5,12 +5,15 @@ import pygame
 class Cat():
     def __init__(self, screen, x, y):
         self.image = pygame.image.load("./images/cat_right.png")
+        self.heart = pygame.image.load('./images/heart.png')
         self.x, self.y = x, y
         self.screen = screen
         self.lives = 3
 
     def draw(self):
         self.screen.blit(self.image, [self.x, self.y])
+        for i in range(0, self.lives):
+            self.screen.blit(self.heart, [16+i*36, 16])
 
     def move_left(self):
         self.image = pygame.image.load("./images/cat.png")
